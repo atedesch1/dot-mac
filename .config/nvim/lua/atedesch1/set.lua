@@ -2,6 +2,11 @@
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
+-- netrw settings
+-- vim.g.netrw_keepdir = 0
+-- vim.g.netrw_localcopydircmd = 'cp -r'
+
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -65,7 +70,5 @@ vim.opt.wrap = false
 -- vim.opt.scrolloff = 8
 -- vim.opt.signcolumn = "yes"
 -- vim.opt.isfname:append("@-@")
---
--- vim.opt.updatetime = 50
 --
 -- vim.opt.colorcolumn = "80"

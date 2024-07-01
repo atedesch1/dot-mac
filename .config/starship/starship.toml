@@ -1,0 +1,61 @@
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = true
+
+# The character module shows a character (usually an arrow) beside where the text is entered in your terminal.
+[character]
+success_symbol = "[~](bold green)"
+error_symbol = "[~](bold red)"
+
+# The cmd_duration module shows how long the last command took to execute. The module will be shown only if the command took longer than two seconds, or the min_time config value, if it exists.
+[cmd_duration]
+min_time = 500
+format = "took [$duration](bold yellow) "
+
+# The directory module shows the path to your current directory, truncated to three parent folders. Your directory will also be truncated to the root of the git repo that you're currently in.
+[directory]
+truncation_symbol = "…/"
+read_only = " "
+
+[gcloud]
+disabled = true
+
+[aws]
+disabled = true
+symbol = "  "
+
+[c]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[buf]
+disabled = true
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = " "

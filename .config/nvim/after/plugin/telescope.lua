@@ -39,7 +39,7 @@ vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
 
 -- Custom live_grep in netrw directory
 local function live_grep_in_directory()
-  -- Use current netrw directory as the search directory
+  -- Use current netrw directory as search directory
   local search_dir = vim.fn.expand('%:p:h')
   print('Searching in directory: ' .. search_dir)
   if search_dir then
@@ -72,7 +72,7 @@ vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
-vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
+vim.keymap.set('n', '<leader>sg', live_grep_git_root, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sG', live_grep_in_directory, { desc = '[S]earch by [G]rep in directory' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })

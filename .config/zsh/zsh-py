@@ -1,0 +1,8 @@
+# Path setup
+export PATH=/Users/alvaro/Library/Python/3.9/bin:$PATH # path from install
+
+# virtualenv configuration
+export WORKON_HOME=$HOME/.virtualenvs 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 # path from which python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/Users/alvaro/Library/Python/3.9/bin/virtualenv
+source /Users/alvaro/Library/Python/3.9/bin/virtualenvwrapper.sh

@@ -1,0 +1,42 @@
+# nvim
+alias vim='nvim'
+
+# colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# ls
+alias ls='ls --color=always'
+alias la='ls -la'
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# git
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias merge='git merge'
+alias rebase='git rebase'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias stat='git status'
+alias tag='git tag'
+alias newtag='git tag -a'
+alias push-origin='git push --set-upstream origin'
+alias stash='git stash'
+
+# github copilot cli
+alias copilot='gh copilot'
+alias gcs='gh copilot suggest'
+alias gce='gh copilot explain'
+
+# kubectl
+[ -f $ZDOTDIR/.kubectl_aliases ] && source $ZDOTDIR/.kubectl_aliases

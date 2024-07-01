@@ -15,15 +15,20 @@ autocmd("BufWinEnter", {
     local opts = { buffer = bufnr, remap = false }
 
     vim.keymap.set("n", "<leader>p", function()
-      vim.cmd.Git('push')
-    end, opts)
-
-    vim.keymap.set("n", "<leader>P", function()
       vim.cmd.Git('pull --rebase')
     end, opts)
 
-    -- NOTE: It allows me to easily set the branch i am pushing and any tracking
-    -- needed if i did not set the branch up correctly
-    vim.keymap.set("n", "<leader>t", ":Git push -u origin ", opts);
+    vim.keymap.set("n", "<leader>P", function()
+      vim.cmd.Git('push')
+    end, opts)
+
+    vim.keymap.set("n", "<leader>t", function()
+      local word = vim.fn.expand("<cWORD>")
+      vim.api.nvim_feedkeys(":" .. "Git push -u origin " .. word, "n", true)
+    end, opts)
+    vim.keymap.set("n", "<leader>T", ":Git push -u origin ", opts);
+
+    vim.keymap.set("n", "<leader>c", ":Git checkout ", opts);
+    vim.keymap.set("n", "<leader>r", ":Git rebase ", opts);
   end,
 })

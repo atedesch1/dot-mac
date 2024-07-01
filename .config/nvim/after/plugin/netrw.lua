@@ -1,0 +1,60 @@
+-- local function netrw_remove_recursive()
+--   -- Check if the current filetype is "netrw"
+--   if vim.bo.filetype ~= "netrw" then
+--     return
+--   end
+--
+--   -- get path of file under cursor
+--   local path = vim.fn.expand("<cfile>:p")
+--
+--   -- prompt for deleting path
+--   local confirm = vim.fn.input("Delete " .. path .. "? [y/N] ")
+--
+--   -- if user confirms, delete the file
+--   if confirm == "y" then
+--     vim.fn.delete(path, "rf")
+--     -- refresh netrw buffer
+--     vim.cmd("e .")
+--   end
+-- end
+--
+-- vim.api.nvim_create_autocmd("filetype", {
+--   pattern = "netrw",
+--   callback = function()
+--     -- local bufnr = vim.api.nvim_get_current_buf()
+--     local opts = { buffer = true, remap = true }
+--
+--     -- Navigation
+--     vim.keymap.set("n", "h", "-", opts)
+--     vim.keymap.set("n", "l", "<CR>", opts)
+--
+--     -- toggle dotfiles
+--     vim.keymap.set("n", ".", "gh", opts)
+--     -- close preview
+--     vim.keymap.set("n", "P", "<C-w>z", opts)
+--
+--     -- Marks
+--     -- toggle mark file/dir
+--     vim.keymap.set("n", "<TAB>", "mf", opts)
+--     -- remove all marks
+--     vim.keymap.set("n", "<S-TAB>", "mu", opts)
+--
+--     -- File management
+--     -- create file
+--     vim.keymap.set("n", "n", "%:w<CR>:buffer #<CR>", opts)
+--     -- rename file
+--     vim.keymap.set("n", "r", "R", opts)
+--     -- delete file/dir
+--     vim.keymap.set("n", "D", netrw_remove_recursive, opts)
+--     -- copy marked files
+--     vim.keymap.set("n", "c", "mc", opts)
+--     -- copy marked files here
+--     vim.keymap.set("n", "C", "mtmc", opts)
+--     -- move/cut marked files
+--     vim.keymap.set("n", "x", "mm", opts)
+--     -- move/cut marked files here
+--     vim.keymap.set("n", "X", "mtmm", opts)
+--     -- run external command on files
+--     vim.keymap.set("n", "!", "mx", opts)
+--   end
+-- })

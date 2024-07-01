@@ -1,0 +1,6 @@
+vimhere()
+{
+    nvim .
+    exit 0
+}
+bindkey -s '^ ' 'vimhere\n'

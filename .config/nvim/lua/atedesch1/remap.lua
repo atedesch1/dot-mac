@@ -6,7 +6,8 @@ vim.g.maplocalleader = " "
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
-vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = '[E]xplorer' })
+vim.keymap.set('n', '-', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>fe', vim.cmd.Ex, { desc = '[E]xplorer' })
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
@@ -63,9 +64,9 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 -- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- [[ Source current file ]]
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+-- vim.keymap.set("n", "<leader><leader>", function()
+--     vim.cmd("so")
+-- end)
 
 -- [[ Noops ]]
 vim.keymap.set("n", "Q", "<nop>")
